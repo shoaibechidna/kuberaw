@@ -1,23 +1,23 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: datastoreapp
-  namespace: datastorepoc
+  name: tmpname
+  namespace: tmpnamespace
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: datastoreapp
+      app: tmpmatchlabels
   template:
     metadata:
       labels:
-        app: datastoreapp
+        app: tmpname
     spec:
       containers:
-      - name: bigimage
-        image: mdshoaib707/datastore:working
+      - name: tmpcontainername
+        image: tmpimage
         command: ["/bin/sh"]
         args: ["-c", "mvn -Plocal clean jetty:run-exploded -DprojectID=kohls-mobile-sandbox -f /getting-started-java/bookshelf/2-structured-data/pom.xml"]
         ports:
-        - name: datastoreport
-          containerPort: 8080
+        - name: tmpportname
+          containerPort: tmpportnumber
