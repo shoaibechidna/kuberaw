@@ -17,7 +17,7 @@ spec:
       - name: tmpcontainername
         image: tmpimage
         command: ["/bin/sh"]
-        args: ["-c", "mvn -Plocal clean jetty:run-exploded -DprojectID=kohls-mobile-sandbox -f /getting-started-java/bookshelf/2-structured-data/pom.xml"]
+        args: ["-c", "tmpargs"]
         ports:
         - name: tmpportname
           containerPort: tmpportnumber
