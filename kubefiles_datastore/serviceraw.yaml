@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: datastoreservice
-  namespace: datastorepoc
+  name: tmpservicename
+  namespace: tmpservicenamespace
 spec:
   selector:
-    app: datastoreapp
+    app: tmpselector
   ports:
-  - port: 32006
-    nodePort: 32006
-    targetPort: datastoreport
+  - port: tmpport
+    nodePort: tmpnodeport
+    targetPort: tmptargetport
     protocol: TCP
   type: NodePort
